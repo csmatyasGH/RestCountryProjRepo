@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>batchCollectCountryInfo</members>
+        <members>jsonCountryWrapper</members>    
+        <members>ChnageCCountry</members> 
+        <members>RestUtilities</members>   
+        <members>RestCountrIesTest</members>      
+
+       <members>BuildCountryInfo4Lead</members>           
+             
+        <members>RestCountriesMock</members>  
+            
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>CCountry__c</members>
+        <members>CountyURLBuilder__mdt</members>   
+
+        <members>LeadValidRuleSettings__c</members>             
+        <name>CustomObject</name>
+    </types>    
+    <types>
+        <members>CCountry__c.Capital_City__c</members>
+        <members>CCountry__c.CountryCode2__c</members>     
+        <members>CCountry__c.CountryCode3__c</members>  
+        <members>CCountry__c.Region__c</members>    
+        <members>CCountry__c.RegionalBlock__c</members>                            
+        <members>CCountry__c.SubRegion__c</members> 
+
+        <members>Lead.CapitalCity__c</members>
+        <members>Lead.CountryCode2__c</members>     
+        <members>Lead.CountryCode3__c</members>  
+        <members>Lead.Region__c</members>                                
+        <members>Lead.SubRegion__c</members>
+        <members>Lead.RegionalBloc__c</members>   
+        <members>Lead.Owner_Since__c</members>             
+        <name>CustomField</name>
+    </types>  
+
+
+    <types>
+     <members>Lead.OwnerChangeRule_CustSetting</members>
+     <members>Lead.OwnerChangeRule_HardCoded</members>
+        <name>ValidationRule</name>
+    </types>
+
+    <types>
+        <members>TrackLeadOwner</members>
+        <members>SetOwnerSinceFlow</members>   
+
+        <members>SetCountryInfoOnNewLead</members>      
+        <name>Flow</name>
+    </types>    
+
+    <version>52.0</version>
+</Package>

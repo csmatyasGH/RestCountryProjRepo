@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>command__c</fullName>
+    <description>type of the cpmmand we are usinng lke All, regionalblock, alpha?codes   (accordign t REST  specification)</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>type of the cpmmand we are usinng lke All, regionalblock, alpha?codes   (accordign t REST  specification)</inlineHelpText>
+    <label>command</label>
+    <length>25</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

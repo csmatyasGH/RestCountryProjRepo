@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OwnerChangeRule_CustSetting</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND
+(
+ISCHANGED(OwnerId),
+OR
+  (
+  ISBLANK(TEXT(LeadSource)) , 
+  AND
+    (
+    $Profile.Name !=  $Setup.LeadValidRuleSettings__c.CountryException__c ,
+    ISBLANK(Country) 
+    )
+  , 
+  AND
+    (
+    $Profile.Name !=  $Setup.LeadValidRuleSettings__c.EmployeeException__c ,
+    ISBLANK(NumberOfEmployees) 
+    )
+  )
+)</errorConditionFormula>
+    <errorMessage>You can not change Owner due to missing fields</errorMessage>
+</ValidationRule>
