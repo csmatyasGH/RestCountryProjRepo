@@ -3,7 +3,6 @@
     <types>
         <members>batchCollectCountryInfo</members>
         <members>jsonCountryWrapper</members>    
-        <members>ChnageCCountry</members> 
         <members>RestUtilities</members>   
         <members>RestCountrIesTest</members>      
 
