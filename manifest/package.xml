@@ -20,6 +20,12 @@
         <members>LeadValidRuleSettings__c</members>             
         <name>CustomObject</name>
     </types>    
+
+    <types>
+        <members>ChnageCCountry</members>           
+        <name>ApexTrigger</name>
+    </types> 
+
     <types>
         <members>CCountry__c.Capital_City__c</members>
         <members>CCountry__c.CountryCode2__c</members>     
