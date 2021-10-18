@@ -159,6 +159,51 @@ private class RestCountrIesTest
         
         Testbatch_1();
     }  
+
+    @isTest    
+    /********************************
+    Need for Coverage. Fake test
+    ********************************/
+    private static void TesthasChanged() 
+    {
+        batchCollectCountryInfo batch = new batchCollectCountryInfo();
+        //we are not going to run the batch, Just test one of its method
+
+        CCountry__c source = new CCountry__c();
+        source.CountryCode3__c = 'source';
+
+        CCountry__c target = new CCountry__c();
+        target.CountryCode3__c = 'target';        
+        
+        Boolean change = batch.HasChanged(source,target);
+        System.assertEquals(change,true);
+    } 
+    
+    @isTest    
+    /*************************************
+    create a CCountry then create a Lead
+    and check if the country info fields
+    are populated. Test the PRocess Builder
+    and the invocable
+    *************************************/
+    private static void TestLeadCreation() 
+    {
+    List<String> countries = new List<String>{'HU/Hungary'};
+    List<jsonCountryWrapper> wrappers = createTestWrapperCountries(1,countries);
+    CCountry__c converted = wrappers[0].converttoCCountry();
+    insert converted;
+
+    Lead lidu = new Lead();
+    lidu.Lastname = 'MyLead';
+    lidu.Country = 'Hungary';
+    lidu.LeadSource = 'Web';
+    lidu.Company = 'HomeLead';
+
+    insert lidu;
+
+    lidu = [Select id,CapitalCity__c from Lead where Lastname = 'MyLead' limit 1];
+    system.assertnotEquals(lidu.CapitalCity__c,null);
+    }    
              
 
 }

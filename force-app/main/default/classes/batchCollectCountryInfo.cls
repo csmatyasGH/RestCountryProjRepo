@@ -115,6 +115,7 @@ public batchCollectCountryInfo()
     return queryu; 
     }
 
+    @testvisible
     /*****************************************************************
     Check if any parameter if the country has chnaged
     I ound this very unliklelly. I these key elements  rarely chnage 
